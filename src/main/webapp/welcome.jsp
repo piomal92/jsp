@@ -24,5 +24,6 @@
     </label><br/>
     <input type="submit" value="Wyślij">
 </form>
+<a href="http://localhost:8080/search.jsp?query=example&page=99&sort=desc">link</a>
 </body>
 </html>

@@ -14,7 +14,7 @@
 <p>
     Szukane słowo: <b><%= request.getParameter("query")%></b><br/>
     Strona: <b><%= request.getParameter("page")%></b><br/>
-    Sortowanie: <b><%= request.getParameter("sort")%></b>
+    Sortowanie: <b><%= "desc".equals(request.getParameter("sort")) ? "malejąco" : "rosnąco"%></b>
 </p>
 </body>
 </html>
