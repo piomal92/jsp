@@ -6,18 +6,23 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<jsp:useBean id="calculator" class="pl.sda.Calculator"/>
-<jsp:setProperty name="calculator" property="n" value="6"/>
+
 <html>
 <head>
-    <title>Podnoszenie do potęgi</title>
+    <title>Formularze & search</title>
 </head>
 <body>
-    <jsp:getProperty name="calculator" property="n"/> <sup>2</sup> wynosi:
-<%
-    int square = calculator.square();
-    out.print(square);
-%>
-
+<h1>Formularz</h1>
+<form action="search.jsp" method="get">
+    <label>szukane słowo <input type="text" name="query"> </label><br/>
+    <label>strona nr <input type="text" name="page"> </label><br/>
+    <label>Sortowanie
+        <select name="sort">
+            <option value="asc">rosnąco</option>
+            <option value="desc">malejąco</option>
+        </select>
+    </label><br/>
+    <input type="submit" value="Wyślij">
+</form>
 </body>
 </html>
