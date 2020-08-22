@@ -13,7 +13,7 @@
 </head>
 <body>
 <h1>Formularz</h1>
-<form action="search.jsp" method="get">
+<form action="search.jsp" method="post">
     <label>szukane słowo <input type="text" name="query"> </label><br/>
     <label>strona nr <input type="text" name="page"> </label><br/>
     <label>Sortowanie
