@@ -9,21 +9,14 @@
 
 <html>
 <head>
-    <title>Formularze & search</title>
+    <title>Cookies</title>
 </head>
 <body>
-<h1>Formularz</h1>
-<form action="search.jsp" method="post">
-    <label>szukane słowo <input type="text" name="query"> </label><br/>
-    <label>strona nr <input type="text" name="page"> </label><br/>
-    <label>Sortowanie
-        <select name="sort">
-            <option value="asc">rosnąco</option>
-            <option value="desc">malejąco</option>
-        </select>
-    </label><br/>
-    <input type="submit" value="Wyślij">
-</form>
-<a href="http://localhost:8080/search.jsp?query=example&page=99&sort=desc">link</a>
+<h2>Obsługa cookie</h2>
+<%
+    Cookie cookie = new Cookie("searchId", String.valueOf(123456));
+    cookie.setMaxAge(60 * 60 *24);
+    response.addCookie(cookie);
+%>
 </body>
 </html>
