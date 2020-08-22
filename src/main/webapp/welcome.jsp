@@ -1,4 +1,4 @@
-<%--
+<%@ page import="java.time.LocalDateTime" %><%--
   Created by IntelliJ IDEA.
   User: piotr
   Date: 22.08.2020
@@ -12,7 +12,10 @@
 </head>
 <body>
 <p>
-    Dzisiaj jest <%= java.time.LocalDateTime.now().toString() %>
+    Dzisiaj jest: <%
+    final String time = LocalDateTime.now().toString(); //ctrl + alt + v = tworzy zmienną
+    out.println(time);
+%>
 </p>
 </body>
 </html>
