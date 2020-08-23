@@ -8,7 +8,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 
 //@WebFilter(filterName = "MyFilter", urlPatterns ="/")
-@WebFilter(filterName = "MyFilter", servletNames = {"HelloWorldServlet"}) //nazwa servletu a nie klasy, tu akurat taka sama
+//@WebFilter(filterName = "MyFilter", servletNames = {"HelloWorldServlet"}) //nazwa servletu a nie klasy, tu akurat taka sama
 public class MyFilter implements Filter {
 
     @Override
