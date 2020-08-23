@@ -25,8 +25,9 @@ public class HelloWorldServlet extends HttpServlet {
         writer.println("UserId: " + getInitParameter("userId"));
         writer.println("Localization: " + getInitParameter("localization"));
 
+//        response.sendRedirect("index2.jsp");
         RequestDispatcher dispatcher = request.getRequestDispatcher("index2.jsp");
-        dispatcher.include(request, response);
+        dispatcher.forward(request, response);
     }
 
 }
