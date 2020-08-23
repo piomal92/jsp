@@ -9,14 +9,16 @@
 
 <html>
 <head>
-    <title>Cookies</title>
+    <title>Obsługa sesji</title>
 </head>
 <body>
-<h2>Obsługa cookie</h2>
+<h2>Obsługa sesji</h2>
+<a href="session.jsp">przejście do session</a>
+
 <%
-    Cookie cookie = new Cookie("searchId", String.valueOf(123456));
-    cookie.setMaxAge(60 * 60 *24);
-    response.addCookie(cookie);
+    request.getSession().invalidate();
+    HttpSession newSession = request.getSession(true);
+    newSession.setAttribute("userId", 123456);
 %>
 </body>
 </html>
