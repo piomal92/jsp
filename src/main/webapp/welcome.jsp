@@ -10,7 +10,7 @@
 <jsp:setProperty name="calculator" property="n" value="6"/>
 <html>
 <head>
-    <title>Podnoszenie do potęgi</title>
+    <title>Potęgi</title>
 </head>
 <body>
     <jsp:getProperty name="calculator" property="n"/> <sup>2</sup> wynosi:
