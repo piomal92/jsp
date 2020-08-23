@@ -1,9 +1,14 @@
 package pl.sda.filter;
 
+import pl.sda.servlet.HelloWorldServlet;
+
 import javax.servlet.*;
+import javax.servlet.annotation.WebFilter;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+//@WebFilter(filterName = "MyFilter", urlPatterns ="/")
+@WebFilter(filterName = "MyFilter", servletNames = {"HelloWorldServlet"}) //nazwa servletu a nie klasy, tu akurat taka sama
 public class MyFilter implements Filter {
 
     @Override
